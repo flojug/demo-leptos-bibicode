@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8" />
+     <link rel="stylesheet" href="./input-4b5f14cbc4c27790.css" integrity="sha384-gJvsXeviC5mPUz804PQE1u1DLDQ0ywB0xjZq3CUFlvdBlDBABI40UKNovElpVwq7"/>
+    <title>Test Bibicode</title>
+
+  <link rel="modulepreload" href="./leptos-bibicode-48f7ce5163c7a213.js" crossorigin="anonymous" integrity="sha384-zfq10s9cpjV+OrBMApjV7dDLDB9bLgbPA7SwllLak6kJCDy+24IlQqPoqo0M9oRS"><link rel="preload" href="./leptos-bibicode-48f7ce5163c7a213_bg.wasm" crossorigin="anonymous" integrity="sha384-C12WYfIOsYI20XTxYvuKRBIA5WU42U9SDumlEtyekZEOnw09+36j088ez0TlM8U4" as="fetch" type="application/wasm"></head>
+  <body>
+<script type="module">
+import init, * as bindings from './leptos-bibicode-48f7ce5163c7a213.js';
+const wasm = await init({ module_or_path: './leptos-bibicode-48f7ce5163c7a213_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
