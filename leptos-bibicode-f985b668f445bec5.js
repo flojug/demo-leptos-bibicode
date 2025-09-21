@@ -217,16 +217,16 @@ function makeMutClosure(arg0, arg1, dtor, f) {
     CLOSURE_DTORS.register(real, state, state);
     return real;
 }
-function __wbg_adapter_6(arg0, arg1, arg2) {
+function __wbg_adapter_8(arg0, arg1, arg2) {
+    wasm.closure178_externref_shim(arg0, arg1, arg2);
+}
+
+function __wbg_adapter_11(arg0, arg1, arg2) {
     wasm.closure85_externref_shim(arg0, arg1, arg2);
 }
 
-function __wbg_adapter_9(arg0, arg1) {
+function __wbg_adapter_14(arg0, arg1) {
     wasm.wasm_bindgen__convert__closures_____invoke__h0fd2e0cfacb25619(arg0, arg1);
-}
-
-function __wbg_adapter_14(arg0, arg1, arg2) {
-    wasm.closure178_externref_shim(arg0, arg1, arg2);
 }
 
 function __wbg_adapter_117(arg0, arg1, arg2, arg3) {
@@ -716,17 +716,17 @@ function __wbg_get_imports() {
     };
     imports.wbg.__wbindgen_cast_3608161749b0652f = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 177, function: Function { arguments: [Externref], shim_idx: 178, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_14);
+        const ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_8);
         return ret;
     };
     imports.wbg.__wbindgen_cast_63aaab920a14477e = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 84, function: Function { arguments: [NamedExternref("Event")], shim_idx: 85, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 84, __wbg_adapter_6);
+        const ret = makeMutClosure(arg0, arg1, 84, __wbg_adapter_11);
         return ret;
     };
     imports.wbg.__wbindgen_cast_d8eeb2908890b13e = function(arg0, arg1) {
         // Cast intrinsic for `Closure(Closure { dtor_idx: 86, function: Function { arguments: [], shim_idx: 87, ret: Unit, inner_ret: Some(Unit) }, mutable: true }) -> Externref`.
-        const ret = makeMutClosure(arg0, arg1, 86, __wbg_adapter_9);
+        const ret = makeMutClosure(arg0, arg1, 86, __wbg_adapter_14);
         return ret;
     };
     imports.wbg.__wbindgen_init_externref_table = function() {

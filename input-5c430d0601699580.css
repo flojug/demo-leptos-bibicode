@@ -1,4 +1,11 @@
 /*
+@layer theme, custom-base, custom-components, custom-utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(custom-base);
+@import "tailwindcss/utilities.css" layer(custom-utilities);
+*/
+
+/*
 ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
@@ -534,69 +541,91 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-@layer theme, custom-base, custom-components, custom-utilities;
+.flex {
+  display: flex;
+}
 
-@import "tailwindcss/theme.css" layer(theme);
+.w-1\/4 {
+  width: 25%;
+}
 
-@import "tailwindcss/preflight.css" layer(custom-base);
+.w-3\/4 {
+  width: 75%;
+}
 
-@import "tailwindcss/utilities.css" layer(custom-utilities);
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@tailwind theme;
+
+@tailwind flex;
 
 @theme {
-  --aspect-retro: 4 / 3;
 }
 
 html {
   background-color: #eee;
 }
 
-div#title {
-  padding: 10px;
-  font-weight: bold;
-  font-size: 3em;
-}
-
-div#content {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  width: 100%;
-}
-
-div#content div {
-  flex-grow: 1;
-}
-
 div#content div div {
   padding: 5px;
   margin: 5px;
-}
-
-div#first div,
-div#second div {
   background-color: orange;
 }
 
-div#first div span,
-div#second div span {
-  display: inline-flex;
-  width: 25%;
+div#content div div span,
+div#content div div span {
   color: white;
   font-weight: bold;
-  font-size: 2em;
 }
 
-div#first div input,
-div#second div input {
-  width: 75%;
+div#content div div input,
+div#content div div input {
   border: 1px solid black;
   padding: 2px;
-  font-weight: bold;
-  font-size: 2em;
 }
 
-div#first div input.red,
-div#second div input.red {
+div#content div div input.red,
+div#content div div input.red {
   background-color: palevioletred;
   color: white;
+}
+
+@media (min-width: 768px) {
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
